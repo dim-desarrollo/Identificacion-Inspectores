@@ -9,8 +9,8 @@ h4 {
 
 .container{
   width: 100%;
-  height: 100vh;
-  background: #c0c0c0;
+  height: auto;
+  background: #ffffff;
 }
 
 .cont-card{
@@ -58,10 +58,10 @@ h4 {
 .cont-data {
   width: 80%;
   height: auto;
-  border: 1px solid #e7e7e7;
+  border: 2px solid #e7e7e7;
   box-shadow: 3px 3px 3px rgb(130, 130, 130); 
-  margin-bottom: 1rem;
-  padding: .5rem;
+  /* margin-bottom: 1rem;*/
+  padding: .5rem; 
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -70,10 +70,11 @@ h4 {
 }
 
 .data-user{
-  width: 100%;
+  width: inherit;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
 }
 .data-user p {
   padding-bottom: 0;
@@ -81,6 +82,7 @@ h4 {
 
 .Funciones{
   text-align: center;
+  padding-bottom: .5rem;
 }
 
 .img-logo {
@@ -177,7 +179,7 @@ li {
   .container{
     width: 100%;
     height: auto;
-    background: #c0c0c0;
+    background: #ffffff;
   }
   .cont-data{
     width: 90%; 
@@ -187,10 +189,26 @@ li {
 @media(width > 1000px){
   .container{
     width: 100%;
-    height: 100vh;
-    background: #c0c0c0;
+    height: auto;
+    background: #ffffff;
   }
   .cont-data{
-    width: 60%; 
+    width: 50%;
+    height: 40%; 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+  .data-user{
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: center;
   }
 }
