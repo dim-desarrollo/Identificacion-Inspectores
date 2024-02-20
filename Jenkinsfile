@@ -191,7 +191,7 @@ agent any
                         sh "docker rm -f $contenedorExistente"
                     }
 
-                    sh "docker run -d -p ${PUERTO_EXTERNO}:${PUERTO_INTERNO} --name ${NOMBRE_CONTENEDOR} ${IDENTIFICADOR_IMAGEN}"
+                    //sh "docker run -d -p ${PUERTO_EXTERNO}:${PUERTO_INTERNO} --name ${NOMBRE_CONTENEDOR} ${IDENTIFICADOR_IMAGEN}"
 
                     sh "docker run -d -p ${PUERTO_EXTERNO}:${PUERTO_INTERNO} -v ./nginx.conf:/etc/nginx/conf.d/default.conf --name ${NOMBRE_CONTENEDOR} ${IDENTIFICADOR_IMAGEN}"
 
