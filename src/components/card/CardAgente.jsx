@@ -45,28 +45,20 @@ function CardAgente() {
         <div className='cont-data'>
           <img src={img1} className={`img-logo ${dataAgente != null && dataAgente.activo == 1 ? '' : 'false'}`} alt="imagen perfil " />
           <div className='data-user'>
-            <div>
-              <p>Nombre:
-                <strong>{(dataAgente != null && dataAgente.nombreCompleto)}</strong>
-              </p>
-              <p>Numero Afiliado:
-                <strong>{(dataAgente != null && dataAgente.numeroAfiliado)}</strong>
-              </p>
-              <p>Funcion:
-                <strong>{(dataAgente != null && dataAgente.funcion)}</strong>
-              </p>
-            </div>
-            <div>
-              <p>DNI: <strong>{(dataAgente != null && dataAgente.documento)}</strong></p>
-              <p>Oficina: <strong>{(dataAgente != null && dataAgente.oficina)} </strong></p>
-              <p>Tarea: <strong> {(dataAgente != null && dataAgente.tarea)} </strong></p>
-            </div>
+            <p>Nombre: <strong>{(dataAgente != null && dataAgente.nombreCompleto)}</strong></p>
+            <p>DNI: <strong>{(dataAgente != null && dataAgente.documento)}</strong></p>
+            <p>Afiliado: <strong>{(dataAgente != null && dataAgente.numeroAfiliado)}</strong></p>
+            <p>Oficina: <strong>{(dataAgente != null && dataAgente.oficina)} </strong></p>
+            <p>Funcion: <strong>{(dataAgente != null && dataAgente.funcion)}</strong></p>
+            {/* <p>Tarea: <strong> {(dataAgente != null && dataAgente.tarea)} </strong></p> */}
           </div>
         </div>
       </div>
       <hr />
       <div className='Funciones'>
-        <p>No hay datos</p>
+        <div>
+          <p><strong>Informacion Adicional </strong>- No Registra</p>
+        </div>
       </div>
     </div>
   )
