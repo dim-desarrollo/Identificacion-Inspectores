@@ -8,7 +8,7 @@ function Footer() {
             <footer className='footer-app'>
                 <div className="logo-dim">
                     <img src={dim} alt="" />
-                    <p>
+                    <p className='DIM'>
                         Municipalidad de San Miguel de Tucuman <br />
                         Direccion de Ingresos Municipales
                     </p>

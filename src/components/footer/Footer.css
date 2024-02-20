@@ -55,7 +55,7 @@
     .logo-dim{
         display: flex;
     }
-    .logo-dim p{
+    .logo-dim .DIM{
         display: none;
     }
     .social{
