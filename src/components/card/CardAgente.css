@@ -82,7 +82,7 @@ h4 {
 
 .Funciones{
   text-align: center;
-  padding-bottom: .5rem;
+  padding-bottom: 2rem;
 }
 
 .img-logo {
@@ -183,6 +183,15 @@ li {
   }
   .cont-data{
     width: 90%; 
+  }
+  .cont-logos{
+
+  }
+  .logo{
+    width: 60%;
+  }
+  .muni{
+    height: 6.5rem;
   }
 }
 
