@@ -195,6 +195,8 @@ agent any
 
                     sh "docker run -d -p ${PUERTO_EXTERNO}:${PUERTO_INTERNO} -v ./nginx.conf:/etc/nginx/conf.d/default.conf --name ${NOMBRE_CONTENEDOR} ${IDENTIFICADOR_IMAGEN}"
 
+                    echo "SE HIZO EL CAMBIO"
+
 
                     //nginx.conf
 
