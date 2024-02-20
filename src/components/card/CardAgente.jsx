@@ -5,6 +5,7 @@ import muni from '../../../public/chala.webp'
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { getAgenteById, getAgenteByNum } from '../../services/servicesAgentes'
+import Footer from '../footer/Footer'
 
 //http://localhost:5212/api/inspectores?hashLagajo=3d0ddec1ca8b4863e0618d5527ff6075d9f131960115c8e2a6384f09eb09a272'
 
@@ -58,6 +59,7 @@ function CardAgente() {
           <p><strong>Informacion Adicional </strong>- No Registra</p>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }
