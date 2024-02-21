@@ -24,10 +24,9 @@ function CardAgente() {
   }, [])
 
   function cargarAgente() {
-    console.log("---- Afiliado ----")
-    console.log(numeroAfiliado)
+    
     getAgenteByNum(numeroAfiliado).then(res => setDataAgente(res))
-    console.log(dataAgente)
+    
   }
 
   return (
@@ -44,7 +43,21 @@ function CardAgente() {
         {/* <div className='img-User'>
         </div> */}
         <div className='cont-data'>
-          <img src={img1} className={`img-logo ${dataAgente != null && dataAgente.activo == 1 ? '' : 'false'}`} alt="imagen perfil " />
+          {
+            (dataAgente !== null && dataAgente.urlImagen !== null) ?
+              <img
+                src={'http://dimsmt.gob.ar:3010' + dataAgente.urlImagen}
+                className={`img-logo ${dataAgente != null && dataAgente.activo == 1 ? '' : 'false'}`}
+                alt="imagen perfil"
+              />
+              :
+              <img
+                src={img1}
+                className={`img-logo ${dataAgente != null && dataAgente.activo == 1 ? '' : 'false'}`}
+                alt="imagen perfil"
+              />
+          }
+          {/* <img src={img1} className={`img-logo ${dataAgente != null && dataAgente.activo == 1 ? '' : 'false'}`} alt="imagen perfil " /> */}
           <div className='data-user'>
             <p>Nombre: <strong>{(dataAgente != null && dataAgente.nombreCompleto)}</strong></p>
             <p>DNI: <strong>{(dataAgente != null && dataAgente.documento)}</strong></p>

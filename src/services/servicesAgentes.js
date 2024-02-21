@@ -18,7 +18,6 @@ export function getAgenteById(id) {
 export function getAgenteByNum(num) {
   //return fetch(`http://localhost:5173/agentes.json`, options)
 
-
   const options = { method: 'GET' };
   console.log("---- Afiliado ----")
   console.log(num)
