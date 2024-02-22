@@ -1,5 +1,4 @@
 h4 {
-
   text-align: center;
 }
 
@@ -71,22 +70,28 @@ h4 {
 
 .data-user{
   width: inherit;
+  margin-top: .5rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
 }
 .data-user p {
-  padding-bottom: 0;
+  margin: .43rem;
 }
 
 .Funciones{
   text-align: center;
   padding-bottom: 2rem;
+  color: black;
+}
+.sello{
+  color: darkgrey;
+  font-weight: 600;
 }
 
 .img-logo {
-  width: 30%;
+  width: 40%;
   border-radius: 50%;
   /* transform: translateX(110%) translateY(50%); */
   border: 4px solid yellowgreen;
@@ -184,14 +189,19 @@ li {
   .cont-data{
     width: 90%; 
   }
-  .cont-logos{
-
-  }
   .logo{
     width: 60%;
   }
   .muni{
     height: 6.5rem;
+  }
+  .Funciones{
+    text-align: center;
+    /* padding-bottom: 2rem; */
+    color: black;
+  }
+  .sello{
+    font-weight: 700;
   }
 }
 
@@ -219,5 +229,13 @@ li {
     flex-wrap: nowrap;
     align-items: flex-start;
     justify-content: center;
+  }
+  .Funciones{
+    text-align: center;
+    /* padding-bottom: 2rem; */
+    color: black;
+  }
+  .sello{
+    font-weight: 700;
   }
 }

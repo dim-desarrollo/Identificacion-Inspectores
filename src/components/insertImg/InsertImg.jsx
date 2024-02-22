@@ -6,7 +6,8 @@ import { postInsertImg } from '../../services/servicesAgentes'
 function InsertImg() {
 
     const [imagen, setImagen] = useState(null);
-    const {numeroAfiliado} = useParams();
+    const [isValid, setIsValid] = useState(false)
+    const { numeroAfiliado } = useParams();
 
     const InserImg = (event) => {
         const file = event.target.files[0];
@@ -22,26 +23,44 @@ function InsertImg() {
     };
 
     function InsertImg() {
-        postInsertImg(numeroAfiliado, imagen).then(res => console.log(res.status))
+        postInsertImg(numeroAfiliado, imagen)
+            .then(res => {
+                if (res != null && res.status != null) {
+                    setIsValid(true)
+                }
+                console.log(res)
+            })
     }
 
     return (
-        <form className='FormImg'>
-            <label htmlFor="">Insertar Imagen para el inspector: {numeroAfiliado} </label>
-            <input type="file" onChange={(e)=>setImagen(e.target.files[0])} accept="image/*" />
-            {/* {
+        <>
+            <form className='FormImg'>
+                <label htmlFor="">Insertar Imagen para el inspector: {numeroAfiliado} </label>
+                <input type="file" onChange={(e) => setImagen(e.target.files[0])} accept="image/*" />
+                {/* {
                 imagen && 
                 setTimeout(() => {
                     <img src={imagen} alt="Imagen mostrada" />
                 }, 1000)
             } */}
-            <button 
-                onClick={InsertImg} 
-                className='btn-Añadir'
-            >
-                Añadir
-            </button>
-        </form>
+                <button
+                    type='button'
+                    onClick={InsertImg}
+                    className='btn-Añadir'
+                >
+                    Añadir
+                </button>
+
+            </form>
+            {
+                isValid != false ?
+                    <div>
+                        <h2>Subido con exito</h2>
+                    </div>
+                    :
+                    ""
+            }
+        </>
     );
 }
 

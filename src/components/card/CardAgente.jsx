@@ -71,7 +71,8 @@ function CardAgente() {
       <hr />
       <div className='Funciones'>
         <div>
-          <p><strong>Informacion Adicional </strong>- No Registra</p>
+          <p><strong>Informacion Adicional</strong></p>
+           <span className='sello'>No Registra</span>
         </div>
       </div>
       <Footer />
