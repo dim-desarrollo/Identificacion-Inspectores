@@ -1,45 +1,22 @@
+body {
+    background: #dcdcdc;
+    place-items: center;
+}
+
 .Contenedor {
     width: 100%;
+    max-width: 600px;
+    min-height: 100vh;
     height: auto;
-    background: #ffffff;
-}
-
-.card-wrapper{
-    width: 100%;
-  /* height: auto; */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: black;
-}
-
-.card2{
-    width: 80%;
-  height: auto;
-  border: 2px solid #e7e7e7;
-  box-shadow: 3px 3px 3px rgb(130, 130, 130); 
-  /* margin-bottom: 1rem;*/
-  padding: .5rem; 
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.card-content{
-    width: inherit;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: stretch;
+    background: #dcdcdc;
 }
 
 .cont-logos2 {
     width: 100%;
     padding-bottom: .8rem;
     margin-top: 0;
-    background-color: #4070f4;
+    margin-bottom: -.6rem;
+    background-color: rgb(112 119 126);
     border-radius: 0 0 30px 0;
     transform: translateY(-10%);
     display: flex;
@@ -53,7 +30,7 @@
     width: 60%;
     border: none;
     border-radius: 0;
-    transform: translateX(25%) translateY(3px);
+    transform: translateX(25%) translateY(10px);
 }
 
 .muni2 {
@@ -65,55 +42,216 @@
     transform: translateY(-5px) translateX(-20px);
 }
 
-.card-content p {
+.card-wrapper {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.card2 {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    border-radius: 25px;
+    background-color: #dcdcdc;
+    place-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-image {
+    margin: 0 auto;
+    position: relative;
+
+    width: 150px;
+}
+
+.image-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    row-gap: 5px;
+    padding: 10px 0;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 0 30px 0 30px;
+    background-color: #1F89F6;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 4px solid yellowgreen;
+    border-radius: 5px;
+}
+
+.card-content2 {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    border-radius: 30px 0 30px 0;
+    padding: 10px 0;
+}
+
+.card-content2 p {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-top: 10px;
+    margin-left: 1.5rem;
+}
+
+.Funciones2 {
+    text-align: center;
+    padding: 3rem 0;
+    /* margin-bottom: 3rem; */
+}
+
+.function {
+    width: 30%;
+    color: white;
+    margin-left: 1rem;
+    padding: 0 20px;
+    border-radius: 5px;
+    background: #1F89F6;
+}
+
+.jefe {
+    width: 45%;
+}
+
+
+
+/* 
+
+
+
+
+.cont-logos2 {
+    width: 100%;
+    /* padding-bottom: .8rem;  
+    margin-top: 0;
+    margin-bottom: .5rem;
+    background-color: #1F89F6;
+    border-radius: 0 0 30px 0;
+    transform: translateY(-10%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+
+
+.card-content2 p {
     padding-bottom: 0;
 }
 
-.card-img{
+.card-img {
     width: 80%;
-  border-radius: 50%;
-  /* transform: translateX(110%) translateY(50%); */
-  border: 4px solid yellowgreen;
-  filter: brightness(1.1);
+    /* transform: translateX(110%) translateY(50%); 
+    border: 4px solid yellowgreen;
+    filter: brightness(1.1);
 }
 
-@media(width < 700px) {
+.false {
+    border: 4px solid red;
+}
+
+.Funciones2 {
+    text-align: center;
+    padding: 1rem 0;
+} */
+
+@media(width < 769px) {
+    body {
+        background: #dcdcdc;
+        place-items: center;
+    }
+
     .Contenedor {
         background-color: #dcdcdc;
+        width: 100%;
+        max-width: 550px;
         min-height: 100vh;
+        margin: 0;
+        padding: 0;
+    }
+
+    .cont-logos2 {
+        background: rgb(112 119 126);
+        margin-bottom: -.6rem;
+    }
+
+    .cont-logos2 p {
+        color: #fff;
+        font-weight: 500;
+        margin-right: .5rem;
     }
 
     .card-wrapper {
         width: 100%;
+        background: #dcdcdc;
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-bottom: 1rem;
     }
 
     .card2 {
         width: 100%;
+        margin-bottom: 1.5rem;
         border-radius: 25px;
-        background-color: #fff;
+        background-color: #dcdcdc;
         place-items: center;
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
 
-    .card-content {
+    .card-content2 {
         width: 100%;
-        background: #dcdcdc;
+        height: 100%;
+        background: #fff;
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
-        padding: 10px 14px;
-        
+        border-radius: 30px 0 30px 0;
+        padding: 10px 0;
     }
 
-    .card-content p {
+    .card-content2 p {
         padding-bottom: 0;
         margin-bottom: 0;
         margin-top: 10px;
+        margin-left: 1.5rem;
+    }
+
+    .function {
+        width: 30%;
+        color: white;
+        margin-left: 1rem;
+        padding: 0 20px;
+        border-radius: 5px;
+        background: #1F89F6;
+    }
+
+    .jefe {
+        width: 45%;
     }
 
     .card-image {
@@ -121,14 +259,13 @@
         position: relative;
 
         width: 150px;
-        border-radius: 50%;
     }
 
     .image-content {
         width: 100%;
         position: relative;
         row-gap: 5px;
-        padding: 15px 0;
+        padding: 10px 0;
     }
 
     .overlay {
@@ -138,31 +275,19 @@
         height: 100%;
         width: 100%;
         border-radius: 0 30px 0 30px;
-        background-color: #4070f4;
+        background-color: #1F89F6;
     }
-
-    /*.overlay::before,
-    .overlay::after {
-        content: '';
-        position: absolute;
-        right: 0;
-        bottom: -40px;
-        height: 40px;
-        width: 40px;
-        background-color: #4070f4;
-    }
-
-    
-    .overlay::after {
-        border-radius: 0 25px 0 0;
-        background-color: #fff;
-    }*/
 
     .card-img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        border-radius: 50%;
         border: 4px solid yellowgreen;
+    }
+
+    .Funciones2 {
+        text-align: center;
+        padding: 1rem 0;
+        /* margin-bottom: 3rem; */
     }
 }

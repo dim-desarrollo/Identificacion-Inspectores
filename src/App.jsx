@@ -11,7 +11,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path='/' element={ <CardInspectores /> } />
+      <Route path='/card/:numeroAfiliado' element={ <CardInspectores /> } />
       <Route path='/generar' element={ <GenerateQR /> } />
       <Route path='/inspectores/:numeroAfiliado' element={ <CardAgente /> } />
       <Route path='/scaner' element={ <ViewAgentes /> } />
