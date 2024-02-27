@@ -1,7 +1,7 @@
 // const URL = "http://172.20.255.15:3010"
 // const URL = "http://172.20.254.38:8080"
 const URL = "http://dimsmt.gob.ar:2020"
-const URLN = "http://172.20.255.17:2020"
+// const URLN = "http://172.20.255.17:2020"
 const URLIMG = "http://172.20.255.15:3010"
 
 export function getAgenteById(id) {
@@ -22,7 +22,7 @@ export function getAgenteByNum(num) {
   console.log("---- Afiliado ----")
   console.log(num)
 
-  return fetch(`${URLN}/api/inspector?hashLagajo=${num}`, options)
+  return fetch(`${URL}/api/inspector?hashLagajo=${num}`, options)
     .then(response => response.json())
     .then(response => {
       console.log(response)
