@@ -4,12 +4,14 @@ import CardAgente from "./components/card/CardAgente"
 import ViewAgentes from "./components/scanner/ViewAgentes"
 import ListInspectors from "./components/list/ListInspectors"
 import InsertImg from "./components/insertImg/InsertImg"
+import CardInspectores from "./components/card2/CardInspectores"
 
 function App() {
   
 
   return (
     <Routes>
+      <Route path='/card/:numeroAfiliado' element={ <CardInspectores /> } />
       <Route path='/generar' element={ <GenerateQR /> } />
       <Route path='/inspectores/:numeroAfiliado' element={ <CardAgente /> } />
       <Route path='/scaner' element={ <ViewAgentes /> } />

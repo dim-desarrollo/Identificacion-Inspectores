@@ -1,35 +1,43 @@
 .footer-app {
-    /* background: linear-gradient(90deg, var(--gradient-blue), var(--gradient-header-skyblue), var(--gradient-header-green)); */
-    background: #1F89F6;
+    /* background: linear-gradient(90deg, var(--gradient-blue), var(--gradient-header-skyblue), var(--gradient-header-green)); 
+    background: rgb(112 119 126);*/
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
+
 .footer-app img {
-    width: 3.7rem;
-    height: 3.7rem;
+    width: 100%;
+    height: 5rem;
     margin-bottom: .0005rem;
 }
+
 .footer-app p {
     margin-left: .7rem;
+    margin-right: 1rem;
     font-size: .8rem;
     font-weight: 400;
 }
+
 .logo-dim {
     /* align-self: flex-start; */
+    width: 80%;
     display: flex;
     align-items: center;
     color: white;
-    margin-left: 1rem;
+    padding: 1.5rem;
+    /* margin-left: 1rem; */
 }
-.social {
 
+.social {
+    height: 5rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
     color: white;
-    margin-right: 2.4rem;
+    margin-right: 5rem;
 }
+
 .conteiner-info {
     text-align: center;
     display: flex;
@@ -38,6 +46,7 @@
     align-items: center;
     margin-right: 2.5rem;
 }
+
 .conteiner-info h4 {
     margin: 0;
     color: #a8c6ed;
@@ -46,24 +55,55 @@
 .conteiner-info p {
     margin: 0;
 }
-@media(width < 700px){
-    .footer-app{
+
+.vertical-line {
+    width: 2px;/* Ancho de la línea */
+    height: 100px;/* Altura de la línea */
+    background-color: white;/* Color de la línea */
+}
+
+@media(width < 769px) {
+    .footer-app {
         display: flex;
         align-items: center;
         justify-content: space-around;
     }
-    .logo-dim{
+
+    .logo-dim {
         display: flex;
+        padding-left: 1.5rem;
     }
-    .logo-dim .DIM{
-        display: none;
+
+    .logo-dim p {
+        width: 70%;
     }
-    .social{
+
+    .vertical-line {
+        width: 4px;/* Ancho de la línea */
+        height: 100px;/* Altura de la línea */
+        background-color: white;/* Color de la línea */
+    }
+
+    .social {
         width: 15%;
         padding-bottom: .3rem;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         justify-content: center;
+        padding-right: 1rem;
+    }
+
+    .conteiner-info h4 {
+        margin: 0;
+        color: white;
+        font-weight: 700;
+    }
+
+    .conteiner-info p {
+        margin: 0;
+        margin-left: .7rem;
+        font-size: .8rem;
+        font-weight: 500;
     }
 }

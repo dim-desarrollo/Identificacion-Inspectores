@@ -1,31 +1,23 @@
 import './Footer.css'
-import dim from '../../../public/Dim.png'
-import muni from '../../../public/chala.webp'
+import NuevoMuni from '../../../public/LOGO_MUNICIPAL_NUEVO.webp'
+import muni from '../../../public/Logo-Muni2.png'
 
 function Footer() {
     return (
         <div>
             <footer className='footer-app'>
                 <div className="logo-dim">
-                    <img src={dim} alt="" />
-                    <p className='DIM'>
-                        Municipalidad de San Miguel de Tucuman <br />
-                        Direccion de Ingresos Municipales
-                    </p>
+                    <img src={NuevoMuni} alt="" />
                 </div>
 
                 {/* <img className='logo-municipalidad' src={muni} alt="" /> */}
 
+
                 <div className="social">
-                    {/* <h3>Contactos</h3> */}
-                    <div className='conteiner-info'>
-                        <h4>Email</h4>
-                        <p>dimsistemas@smt.gob.ar</p>
-                    </div>
-                    <div className='conteiner-info'>
-                        <h4>Telefono</h4>
-                        <p>213123123</p>
-                    </div>
+                    
+                    
+                        <img src={muni} alt="" />
+                    
                 </div>
             </footer>
         </div>
