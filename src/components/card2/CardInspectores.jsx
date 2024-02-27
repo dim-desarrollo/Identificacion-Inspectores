@@ -16,6 +16,7 @@ function CardInspectores() {
     useEffect(() => {
         console.log(numeroAfiliado)
         cargarAgente()
+        
     }, [])
 
     function cargarAgente() {
@@ -46,7 +47,7 @@ function CardInspectores() {
                             {
                                 (dataAgente !== null && dataAgente.urlImagen !== null) ?
                                     <img
-                                        src={'http://dimsmt.gob.ar:3010' + dataAgente.urlImage}
+                                        src={'http://dimsmt.gob.ar:3010' + dataAgente.urlImagen}
                                         className={`card-img1 ${dataAgente != null && dataAgente.activo == 1 ? '' : 'false'}`}
                                         alt="imagen perfil"
                                     />

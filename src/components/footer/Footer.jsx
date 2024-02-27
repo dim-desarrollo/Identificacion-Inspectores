@@ -14,10 +14,7 @@ function Footer() {
 
 
                 <div className="social">
-                    
-                    
-                        <img src={muni} alt="" />
-                    
+                    <img src={muni} alt="" />
                 </div>
             </footer>
         </div>
