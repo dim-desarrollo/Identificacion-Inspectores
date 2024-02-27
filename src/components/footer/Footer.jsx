@@ -1,5 +1,5 @@
 import './Footer.css'
-import dim from '../../../public/Dim.png'
+import NuevoMuni from '../../../public/LOGO_MUNICIPAL_NUEVO.webp'
 import muni from '../../../public/Logo-Muni2.png'
 
 function Footer() {
@@ -7,24 +7,17 @@ function Footer() {
         <div>
             <footer className='footer-app'>
                 <div className="logo-dim">
-                    <p>
-                        Municipalidad de San Miguel de Tucuman
-                    </p>
-                    <div className="vertical-line"></div>
+                    <img src={NuevoMuni} alt="" />
                 </div>
 
                 {/* <img className='logo-municipalidad' src={muni} alt="" /> */}
 
 
                 <div className="social">
-                    <div>
-                        <p>
-                            Secretaria de <strong>Ingresos Municipales</strong>
-                        </p>
-                    </div>
-                    <div>
+                    
+                    
                         <img src={muni} alt="" />
-                    </div>
+                    
                 </div>
             </footer>
         </div>
