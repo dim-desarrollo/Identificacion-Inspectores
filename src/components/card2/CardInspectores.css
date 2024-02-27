@@ -63,11 +63,21 @@ body {
     justify-content: center;
 }
 
+/*.card-image {
+    margin: 0 auto;
+    position: relative;    
+    width: 150px;
+}*/
+
 .card-image {
     margin: 0 auto;
-    position: relative;
-
+    position: relative;    
     width: 150px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .image-content {
@@ -89,7 +99,7 @@ body {
 }
 
 .card-img {
-    width: 100%;
+    width: 135px;
     height: 100%;
     object-fit: cover;
     border: 4px solid yellowgreen;
@@ -121,7 +131,7 @@ body {
 }
 
 .function {
-    width: 30%;
+    width: 20%;
     color: white;
     margin-left: 1rem;
     padding: 0 20px;
@@ -133,50 +143,6 @@ body {
     width: 45%;
 }
 
-
-
-/* 
-
-
-
-
-.cont-logos2 {
-    width: 100%;
-    /* padding-bottom: .8rem;  
-    margin-top: 0;
-    margin-bottom: .5rem;
-    background-color: #1F89F6;
-    border-radius: 0 0 30px 0;
-    transform: translateY(-10%);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    align-content: center;
-}
-
-
-
-.card-content2 p {
-    padding-bottom: 0;
-}
-
-.card-img {
-    width: 80%;
-    /* transform: translateX(110%) translateY(50%); 
-    border: 4px solid yellowgreen;
-    filter: brightness(1.1);
-}
-
-.false {
-    border: 4px solid red;
-}
-
-.Funciones2 {
-    text-align: center;
-    padding: 1rem 0;
-} */
-
 @media(width < 769px) {
     body {
         background: #dcdcdc;
@@ -184,7 +150,7 @@ body {
     }
 
     .Contenedor {
-        background-color: #dcdcdc;
+        background-color: #1F89F6;
         width: 100%;
         max-width: 550px;
         min-height: 100vh;
@@ -193,19 +159,20 @@ body {
     }
 
     .cont-logos2 {
-        background: rgb(112 119 126);
+        border-radius: 50px 0 30px 0;
+        background: white;
         margin-bottom: -.6rem;
     }
 
     .cont-logos2 p {
-        color: #fff;
+        color: #4871f5;
         font-weight: 500;
         margin-right: .5rem;
     }
 
     .card-wrapper {
         width: 100%;
-        background: #dcdcdc;
+        /*background: #dcdcdc;*/
         display: flex;
         align-items: center;
         justify-content: center;
@@ -216,7 +183,7 @@ body {
         width: 100%;
         margin-bottom: 1.5rem;
         border-radius: 25px;
-        background-color: #dcdcdc;
+        background-color:#4871f5 ;
         place-items: center;
         display: flex;
         flex-direction: column;
@@ -242,7 +209,7 @@ body {
     }
 
     .function {
-        width: 30%;
+        width: 20%;
         color: white;
         margin-left: 1rem;
         padding: 0 20px;
@@ -252,6 +219,12 @@ body {
 
     .jefe {
         width: 45%;
+    }
+
+    .advertencia{
+        margin-right: 1.5rem;
+        font-size: 12px;
+        font-weight: 500;
     }
 
     .card-image {
@@ -275,14 +248,22 @@ body {
         height: 100%;
         width: 100%;
         border-radius: 0 30px 0 30px;
-        background-color: #1F89F6;
+        background-color: #7eb4eb;
     }
 
     .card-img {
-        width: 100%;
+        width: 135px;
         height: 100%;
         object-fit: cover;
         border: 4px solid yellowgreen;
+        margin-left: 3rem;
+    }
+    .card-img1 {
+        width: 135px;
+        height: 100%;
+        object-fit: cover;
+        border: 4px solid yellowgreen;
+        
     }
 
     .Funciones2 {

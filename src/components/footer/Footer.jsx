@@ -7,23 +7,23 @@ function Footer() {
         <div>
             <footer className='footer-app'>
                 <div className="logo-dim">
-                    <img src={muni} alt="" />
                     <p>
                         Municipalidad de San Miguel de Tucuman
                     </p>
+                    <div className="vertical-line"></div>
                 </div>
 
                 {/* <img className='logo-municipalidad' src={muni} alt="" /> */}
 
+
                 <div className="social">
-                    {/* <h3>Contactos</h3> */}
-                    <div className='conteiner-info'>
-                        <h4>Email</h4>
-                        <p>dimsistemas@smt.gob.ar</p>
+                    <div>
+                        <p>
+                            Secretaria de <strong>Ingresos Municipales</strong>
+                        </p>
                     </div>
-                    <div className='conteiner-info'>
-                        <h4>Telefono</h4>
-                        <p>213123123</p>
+                    <div>
+                        <img src={muni} alt="" />
                     </div>
                 </div>
             </footer>

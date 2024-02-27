@@ -1,6 +1,6 @@
 .footer-app {
-    /* background: linear-gradient(90deg, var(--gradient-blue), var(--gradient-header-skyblue), var(--gradient-header-green)); */
-    background: rgb(112 119 126);
+    /* background: linear-gradient(90deg, var(--gradient-blue), var(--gradient-header-skyblue), var(--gradient-header-green)); 
+    background: rgb(112 119 126);*/
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -20,6 +20,7 @@
 
 .logo-dim {
     /* align-self: flex-start; */
+    width: 60%;
     display: flex;
     align-items: center;
     color: white;
@@ -32,7 +33,7 @@
     justify-content: space-around;
     align-items: center;
     color: white;
-    margin-right: 2.4rem;
+    margin-right: 2rem;
 }
 
 .conteiner-info {
@@ -53,6 +54,12 @@
     margin: 0;
 }
 
+.vertical-line {
+    width: 2px;/* Ancho de la línea */
+    height: 100px;/* Altura de la línea */
+    background-color: white;/* Color de la línea */
+}
+
 @media(width < 700px) {
     .footer-app {
         display: flex;
@@ -65,16 +72,23 @@
     }
 
     .logo-dim p {
-        display: none;
+        width: 70%;
+    }
+
+    .vertical-line {
+        width: 4px;/* Ancho de la línea */
+        height: 100px;/* Altura de la línea */
+        background-color: white;/* Color de la línea */
     }
 
     .social {
         width: 15%;
         padding-bottom: .3rem;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         justify-content: center;
+        padding-right: 1rem;
     }
 
     .conteiner-info h4 {
