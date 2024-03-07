@@ -47,7 +47,7 @@ function CardInspectores() {
                             {
                                 (dataAgente !== null && dataAgente.urlImagen !== null) ?
                                     <img
-                                        src={'http://dimsmt.gob.ar:3010' + dataAgente.urlImagen}
+                                        src={'http://172.20.255.15:3010' + dataAgente.urlImagen}
                                         className={`card-img1 ${dataAgente != null && dataAgente.activo == 1 ? '' : 'false'}`}
                                         alt="imagen perfil"
                                     />
@@ -61,10 +61,12 @@ function CardInspectores() {
                         </div>
                     </div>
                     <div className='card-content2'>
-                        <p className={`function ${dataAgente != null && dataAgente.activo == 'JEFE DE INSPECTORES' ? 'jefe' : ''}`}><strong>{(dataAgente != null && dataAgente.funcion)}</strong></p>
+                        
+                        <p className={`function ${dataAgente != null && dataAgente.funcion == 'JEFE DE INSPECTORES' || dataAgente != null && dataAgente.funcion == 'NOTIFICADOR' ? 'jefe' : 'SinFuncion'}`}><strong>{(dataAgente != null && dataAgente.funcion)}</strong></p>
                         <p>Nombre: <strong>{(dataAgente != null && dataAgente.nombreCompleto)}</strong></p>
                         <p>DNI: <strong>{(dataAgente != null && dataAgente.documento)}</strong></p>
                         <p>Nro de Afiliado: <strong>{(dataAgente != null && dataAgente.numeroAfiliado)}</strong></p>
+                        <p>Estado: <strong>{(dataAgente != null && dataAgente.activo === 1 ? 'Activo' : 'No Activo')}</strong></p>
                         <p className='advertencia'>Esta credencial es de uso personal e instransferible. En caso de encontrarla, por favor. Comuniquese al numero <strong>(381) 4524670 int 6122</strong> </p>
                         
                     </div>
