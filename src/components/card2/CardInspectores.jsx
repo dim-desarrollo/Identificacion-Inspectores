@@ -47,7 +47,7 @@ function CardInspectores() {
                             {
                                 (dataAgente !== null && dataAgente.urlImagen !== null) ?
                                     <img
-                                        src={'http://172.20.255.15:3010' + dataAgente.urlImagen}
+                                        src={'http://dimsmt.gob.ar:3010' + dataAgente.urlImagen}
                                         className={`card-img1 ${dataAgente != null && dataAgente.activo == 1 ? '' : 'false'}`}
                                         alt="imagen perfil"
                                     />
