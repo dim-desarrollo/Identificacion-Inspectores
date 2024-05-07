@@ -7,7 +7,7 @@ import perfil from '../../../public/Avatar2.jpg'
 import { getAgenteByNum } from '../../services/servicesAgentes'
 import Footer from '../footer/Footer'
 
-function CardInspectores() {
+function    CardInspectores() {
 
     const [dataAgente, setDataAgente] = useState(null)
     const { numeroAfiliado } = useParams()
@@ -16,7 +16,6 @@ function CardInspectores() {
     useEffect(() => {
         console.log(numeroAfiliado)
         cargarAgente()
-        
     }, [])
 
     function cargarAgente() {
@@ -24,6 +23,30 @@ function CardInspectores() {
         console.log(dataAgente)
     }
 
+    function NumeroLegajoValido(num) {
+        
+        let retorno;
+
+         switch (num) {
+            case "48990" :
+                     retorno = false
+                break;
+            case "49074" : 
+                    retorno = false
+               break;
+            case "48993" : 
+                    retorno = false
+            break;
+            case "48999" : 
+                    retorno = false
+            break;          
+            default:
+                  retorno = true
+                break;
+         }
+      
+         return retorno
+    }
 
     return (
         <div className='Contenedor'>
@@ -44,6 +67,7 @@ function CardInspectores() {
                     <div className='image-content'>
                         <span className='overlay'></span>
                         <div className='card-image'>
+                        {/* 'http://dimsmt.gob.ar:3010' */}
                             {
                                 (dataAgente !== null && dataAgente.urlImagen !== null) ?
                                     <img
@@ -63,10 +87,15 @@ function CardInspectores() {
                     <div className='card-content2'>
                         
                         <p className={`function ${dataAgente != null && dataAgente.funcion == 'JEFE DE INSPECTORES' || dataAgente != null && dataAgente.funcion == 'NOTIFICADOR' ? 'jefe' : 'SinFuncion'}`}><strong>{(dataAgente != null && dataAgente.funcion)}</strong></p>
+
                         <p>Nombre: <strong>{(dataAgente != null && dataAgente.nombreCompleto)}</strong></p>
-                        <p>DNI: <strong>{(dataAgente != null && dataAgente.documento)}</strong></p>
-                        <p>Nro de Afiliado: <strong>{(dataAgente != null && dataAgente.numeroAfiliado)}</strong></p>
+
+                         {dataAgente != null && NumeroLegajoValido(dataAgente.numeroAfiliado) ?  <p>DNI: <strong>{( dataAgente.documento)}</strong></p>  : ""}
+
+                         {dataAgente != null && NumeroLegajoValido(dataAgente.numeroAfiliado)    ? <p>Nro de Afiliado: <strong>{(dataAgente != null && dataAgente.numeroAfiliado)}</strong></p>  : "" }   
+                        
                         <p>Estado: <strong>{(dataAgente != null && dataAgente.activo === 1 ? 'Activo' : 'No Activo')}</strong></p>
+
                         <p className='advertencia'>Esta credencial es de uso personal e instransferible. En caso de encontrarla, por favor. Comuniquese al numero <strong>(381) 4524670 int 6122</strong> </p>
                         
                     </div>

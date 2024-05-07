@@ -7,8 +7,8 @@ import { Link } from 'react-router-dom'
 
 function ListInspectors() {
 
+    
     const [data, setData] = useState(null)
-
     const [qr, setQr] = useState('')
  
     const GenerateCode = (IDNI) => {
@@ -45,8 +45,7 @@ function ListInspectors() {
     useEffect(() => {
         Generar()
     }, [])
-
-    
+ 
     function Generar() {
         console.log("object")
         getListInpectores()
