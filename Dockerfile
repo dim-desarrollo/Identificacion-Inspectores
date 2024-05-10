@@ -1,6 +1,10 @@
 FROM node:18-alpine3.17 as build
 
 WORKDIR /app
+
+#parte de la prueba
+COPY .env.$NODE_ENV .env
+
 COPY . /app
 
 RUN npm install
