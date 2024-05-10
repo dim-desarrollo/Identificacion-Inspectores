@@ -22,7 +22,7 @@ export function getAgenteByNum(num) {
   console.log("---- Afiliado ----")
   console.log(num)
 
-  return fetch(`${URL}/api/inspector?hashLagajo=${num}`, options)
+  return fetch(`${import.meta.env.VITE_URL_API}/api/inspector?hashLagajo=${num}`, options)
     .then(response => response.json())
     .then(response => {
       console.log(response)
@@ -50,7 +50,7 @@ export function postInsertImg(Num, img) {
   console.log("----- Imagen -----")
   console.log(img)
 
-  fetch(`${URLIMG}/api/subi-imagen`, requestOptions)
+  fetch(`${import.meta.env.VITE_URL_API}/api/subi-imagen`, requestOptions)
     .then(response => response.json())
     .then(result => console.log(result))
     .catch(error => console.log('error', error));

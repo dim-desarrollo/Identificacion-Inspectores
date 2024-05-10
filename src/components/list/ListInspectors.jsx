@@ -3,14 +3,25 @@ import './ListInspectors.css'
 import { getListInpectores } from '../../services/servicesList'
 import QRCode from 'qrcode'
 import { Link } from 'react-router-dom'
+import { DatosJson } from '../../services/pruebas'
 
 
 function ListInspectors() {
 
-    
+
+     useEffect(() => {
+        DatosJson().then(res => console.log(res))
+     }, []);   
+
+
     const [data, setData] = useState(null)
     const [qr, setQr] = useState('')
- 
+    
+    console.log(import.meta.env.VITE_SOME_KEY) // "123"
+    console.log(import.meta.env.DB_PASSWORD + "2") // undefined       
+     
+     
+
     const GenerateCode = (IDNI) => {
         if (!IDNI) {
             console.error('Ingrese un DNI válido.');
@@ -45,7 +56,7 @@ function ListInspectors() {
     useEffect(() => {
         Generar()
     }, [])
- 
+
     function Generar() {
         console.log("object")
         getListInpectores()
@@ -92,7 +103,7 @@ function ListInspectors() {
                                                 Descargar QR
                                             </a>
                                         }
-                                        
+
                                         <Link to={`/Insert/${datos.numeroAfiliado}`}>
                                             <button>
                                                 Agregar imagen

@@ -171,11 +171,24 @@ body {
     background: #1F89F6;
 }
 
-.jefe {
-    width: 30%;
-}
-.SinFuncion{
+
+.normal{
+    /* background-color: red;    */
     width: 20%;
+    text-align: center;
+}
+
+.altoCargo{
+   width: 70%;
+   margin-left: auto;
+   margin-right: auto;        
+   text-align: center;
+   padding: .5rem;
+   font-weight: 500;    
+}
+
+.altoCargo span {
+   text-align: center;
 }
 
 @media(width < 769px) {
@@ -267,14 +280,25 @@ body {
         background: #0066ff;
     }
 
-    .SinFuncion{
-        width: auto;
-        max-width: 30%;
+    .normal{
+         /* background-color: red;    */
+         width: 30%;
+         text-align: center;
     }
 
-    .jefe {
-        width: auto;
-        max-width: 45%;
+    .altoCargo{
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;        
+        text-align: center;
+        padding: .5rem;
+        font-weight: 500;    
+    }
+
+    .altoCargo span {
+        text-align: center;
+        /* color: red; */
+        
     }
 
     .advertencia {

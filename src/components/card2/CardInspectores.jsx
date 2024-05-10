@@ -48,6 +48,8 @@ function    CardInspectores() {
          return retorno
     }
 
+
+
     return (
         <div className='Contenedor'>
             <div className="cont-logos2">
@@ -67,11 +69,11 @@ function    CardInspectores() {
                     <div className='image-content'>
                         <span className='overlay'></span>
                         <div className='card-image'>
-                        {/* 'http://dimsmt.gob.ar:3010' */}
+                        {/* 'http://dimsmt.gob.ar:3010' PARA PRODUCCION */}
                             {
                                 (dataAgente !== null && dataAgente.urlImagen !== null) ?
                                     <img
-                                        src={'http://dimsmt.gob.ar:3010' + dataAgente.urlImagen}
+                                        src={import.meta.env.VITE_URL_API + dataAgente.urlImagen}
                                         className={`card-img1 ${dataAgente != null && dataAgente.activo == 1 ? '' : 'false'}`}
                                         alt="imagen perfil"
                                     />
@@ -86,8 +88,11 @@ function    CardInspectores() {
                     </div>
                     <div className='card-content2'>
                         
-                        <p className={`function ${dataAgente != null && dataAgente.funcion == 'JEFE DE INSPECTORES' || dataAgente != null && dataAgente.funcion == 'NOTIFICADOR' ? 'jefe' : 'SinFuncion'}`}><strong>{(dataAgente != null && dataAgente.funcion)}</strong></p>
+                        {/* <p className={`function ${dataAgente != null && dataAgente.funcion == 'JEFE DE INSPECTORES' || dataAgente != null && dataAgente.funcion == 'NOTIFICADOR' ? 'jefe' : 'SinFuncion'}`}><strong>{(dataAgente != null && dataAgente.funcion)}</strong></p> */}
 
+                        <div className={`function ${NumeroLegajoValido(dataAgente.numeroAfiliado) ? "normal" : "altoCargo"} `}><span>{dataAgente != null && dataAgente.funcion}</span></div>        
+
+                        
                         <p>Nombre: <strong>{(dataAgente != null && dataAgente.nombreCompleto)}</strong></p>
 
                          {dataAgente != null && NumeroLegajoValido(dataAgente.numeroAfiliado) ?  <p>DNI: <strong>{( dataAgente.documento)}</strong></p>  : ""}
