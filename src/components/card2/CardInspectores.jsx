@@ -39,7 +39,10 @@ function    CardInspectores() {
             break;
             case "48999" : 
                     retorno = false
-            break;          
+            break;  
+            case "49130" : 
+                    retorno = false
+            break;  
             default:
                   retorno = true
                 break;
