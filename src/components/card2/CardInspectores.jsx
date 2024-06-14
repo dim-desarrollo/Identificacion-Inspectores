@@ -93,7 +93,7 @@ function    CardInspectores() {
                         
                         {/* <p className={`function ${dataAgente != null && dataAgente.funcion == 'JEFE DE INSPECTORES' || dataAgente != null && dataAgente.funcion == 'NOTIFICADOR' ? 'jefe' : 'SinFuncion'}`}><strong>{(dataAgente != null && dataAgente.funcion)}</strong></p> */}
 
-                        <div className={`function ${NumeroLegajoValido(dataAgente.numeroAfiliado) ? "normal" : "altoCargo"} `}><span>{dataAgente != null && dataAgente.funcion}</span></div>        
+                        <div className={`function ${dataAgente != null && NumeroLegajoValido(dataAgente.numeroAfiliado) ? "normal" : "altoCargo"} `}><span>{dataAgente != null && dataAgente.funcion}</span></div>      
 
                         
                         <p>Nombre: <strong>{(dataAgente != null && dataAgente.nombreCompleto)}</strong></p>
